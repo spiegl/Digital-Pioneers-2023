@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktbewertung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .rating {
+            font-size: 30px;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            color: #ddd;
+            float: right;
+        }
+
+        .rating label:before {
+           
+        }
+
+        .rating input:checked~label {
+            color: #ffca08;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Produktbewertung</h1>
+        <form>
+            <div class="form-group">
+                <label for="productname">Produktname</label>
+                <input type="text" class="form-control" id="productname" placeholder="Produktname">
+            </div>
+            <div class="form-group">
+                <label for="rating">Bewertung</label>
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="star5" /><label for="star5"><i class="fa fa-pencil"></i></label>
+                    <input type="radio" name="rating" value="4" id="star4" /><label for="star4"><i class="fa fa-pencil"></i></label>
+                    <input type="radio" name="rating" value="3" id="star3" /><label for="star3"><i class="fa fa-pencil"></i></label>
+                    <input type="radio" name="rating" value="2" id="star2" /><label for="star2"><i class="fa fa-pencil"></i></label>
+                    <input type="radio" name="rating" value="1" id="star1" /><label for="star1"><i class="fa fa-pencil"></i></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="review">Bewertungstext</label>
+                <textarea class="form-control" id="review" rows="4"
+                    placeholder="Hier deine Bewertung eingeben..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Absenden</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
