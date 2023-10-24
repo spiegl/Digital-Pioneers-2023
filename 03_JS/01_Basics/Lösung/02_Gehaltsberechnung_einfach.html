@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gehaltsberechnung</title>
+</head>
+<body>
+    <h1>Gehaltsberechnung</h1>
+
+    <form>
+        <label for="bruttoGehalt">Bruttogehalt: </label>
+        <input type="number" id="bruttoGehalt" name="bruttoGehalt" step="0.01" placeholder="Geben Sie Ihr Bruttogehalt ein" required>
+        <button type="button" onclick="berechneGehalt()">Berechnen</button>
+    </form>
+
+    <div id="ergebnisse">
+        <!-- Ergebnisse werden hier angezeigt -->
+    </div>
+
+    <script>
+        function berechneGehalt() {
+            let bruttoGehalt = parseFloat(document.getElementById("bruttoGehalt").value);
+
+            let sozialVersicherung = bruttoGehalt * 0.2768;
+
+            let steuerBemessungGrundlage = bruttoGehalt - sozialVersicherung;
+
+            let einkommensSteuer = 0;
+
+            if (steuerBemessungGrundlage > 915) {
+                einkommensSteuer = (bruttoGehalt - 915) * 0.25;
+            }
+
+            let nettoGehalt = bruttoGehalt - sozialVersicherung - einkommensSteuer;
+
+            // Ergebnisse anzeigen
+            let ergebnisseDiv = document.getElementById("ergebnisse");
+            ergebnisseDiv.innerHTML = "<p>Brutto: " + bruttoGehalt.toFixed(2) + " Euro</p>";
+            ergebnisseDiv.innerHTML += "<p>Sozialversicherung: " + sozialVersicherung.toFixed(2) + " Euro</p>";
+            ergebnisseDiv.innerHTML += "<p>Steuer: " + einkommensSteuer.toFixed(2) + " Euro</p>";
+            ergebnisseDiv.innerHTML += "<p>Netto: " + nettoGehalt.toFixed(2) + " Euro</p>";
+        }
+    </script>
+</body>
+</html>
