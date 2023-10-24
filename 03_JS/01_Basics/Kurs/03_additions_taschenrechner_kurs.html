@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+</head>
+
+<body>
+    <h1>Taschenrechner</h1>
+
+    <form>
+        <label>Zahl 1:</label>
+        <input type="number" id="number1">
+
+        <label>Zahl 2:</label>
+        <input type="number" id="number2">
+    </form>
+
+    <br>
+
+    <button onclick="main()">Addiere</button>
+
+    <script>
+
+
+        function main() {
+            let number1 = parseFloat(document.getElementById('number1').value)
+            let number2 = parseFloat(document.getElementById('number2').value)
+
+            console.log(number1)
+            console.log(number2)
+
+            let sum = number1 + number2
+
+            console.log(sum)
+
+            alert(sum)
+        }
+    </script>
+</body>
+
+</html>
