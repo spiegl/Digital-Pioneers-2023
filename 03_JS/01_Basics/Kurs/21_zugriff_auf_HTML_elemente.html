@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zugriff auf HTML Elemente</title>
+</head>
+
+<body>
+    <h1>Zugriff auf HTML Elemente</h1>
+
+    <form id="myForm">
+        <label>Label: </label>
+        <input type="text" id="meinInput" value="Mein Text">
+    </form>
+
+    <script>
+        // Allgemein
+        let value1 = document.getElementById('meinInput').value
+
+        // Formulare (einfach für den Beginn)
+        let value2 = document.forms.myForm.elements.meinInput.value
+
+        // Output
+        console.log(value1, value2)
+    </script>
+
+</body>
+
+</html>
