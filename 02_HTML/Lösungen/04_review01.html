@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktbewertung</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Produktbewertung</h1>
+        <form>
+            <div class="form-group">
+                <label for="productname">Produktname</label>
+                <input type="text" class="form-control" id="productname" placeholder="Produktname" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Bewertung</label>
+                <select class="form-control" id="rating">
+                    <option value="1">1 Stern</option>
+                    <option value="2">2 Sterne</option>
+                    <option value="3">3 Sterne</option>
+                    <option value="4">4 Sterne</option>
+                    <option value="5">5 Sterne</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="review">Bewertungstext</label>
+                <textarea class="form-control" id="review" rows="4"
+                    placeholder="Hier deine Bewertung eingeben..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Absenden</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
