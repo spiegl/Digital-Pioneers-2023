@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopfrechenspiel</title>
+</head>
+
+<body>
+
+    <h1>Kopfrechenspiel</h1>
+
+    <p>Was ist <span id="number1"></span> + <span id="number2"></span>?</p>
+
+    <script>
+        document.getElementById('number1').innerHTML = Math.ceil(Math.random() * 10)
+        document.getElementById('number2').innerHTML = Math.ceil(Math.random() * 10)
+    </script>
+
+    <form>
+        <div class="form-group">
+            <label>Antwort:</label>
+            <input type="number" id="answer">
+        </div>
+    </form>
+
+    <br>
+
+    <button onclick="main()">Prüfen</button>
+
+    <br><br>
+
+    <div id="output">
+
+    </div>
+
+
+    <script>
+        function main() {
+            let number1 = parseFloat(document.getElementById('number1').innerHTML)
+            let number2 = parseFloat(document.getElementById('number2').innerHTML)
+            let answer = parseFloat(document.getElementById('answer').value)
+            let result = number1 + number2
+
+            if (result == answer) {
+                document.getElementById('output').innerHTML = '<p> Ergebnis ist <b>richtig</b></p>'
+            } else {
+                document.getElementById('output').innerHTML = '<p>Ergebnis ist <b>falsch</b>. Richtig wäre ' + result + '.</p>'
+            }
+        }
+    </script>
+</body>
+
+</html>
