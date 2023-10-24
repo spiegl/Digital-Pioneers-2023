@@ -27,7 +27,7 @@
             let einkommensSteuer = 0;
 
             if (steuerBemessungGrundlage > 915) {
-                einkommensSteuer = (bruttoGehalt - 915) * 0.25;
+                einkommensSteuer = steuerBemessungGrundlage * 0.25;
             }
 
             let nettoGehalt = bruttoGehalt - sozialVersicherung - einkommensSteuer;
