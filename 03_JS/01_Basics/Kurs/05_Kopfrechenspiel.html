@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopfrechenspiel</title>
+</head>
+
+<body>
+
+    <h1>Kopfrechenspiel</h1>
+
+    <div id="rechnung">
+        100 + 10 = ?
+    </div>
+
+    <br>
+
+    <form>
+        <label>Ergebnis</label>
+        <input type="number" id="result">
+    </form>
+
+    <br>
+
+    <button onclick="main()">Prüfen</button>
+
+    <br><br>
+
+    <div id="output">
+
+    </div>
+
+
+    <script>
+        function main() {
+            let number = document.getElementById('result').value
+
+            if (number == 110) {
+                console.log('true')
+                document.getElementById('output').innerHTML = '<h1> Ergebnis ist richtig</h1>'
+            } else {
+                console.log('false')
+                document.getElementById('output').innerHTML = '<h1>Ergebnis ist falsch</h1>'
+            }
+
+            console.log(number)
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

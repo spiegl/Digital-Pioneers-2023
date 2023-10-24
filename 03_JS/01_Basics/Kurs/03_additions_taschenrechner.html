@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Taschenrechner</h1>
+
+    <form>
+        <div class="form-group">
+            <label>Zahl 1:</label>
+            <input type="number" id="zahl1">
+        </div>
+        <div class="form-group">
+            <label>Zahl 2:</label>
+            <input type="number" id="zahl2">
+        </div>
+    </form>
+
+    <button onclick="berechnen()">Berechnen</button>
+
+    <script>
+        function berechnen() {
+            console.log('Funktion berechnen() wurde gestartet')
+
+            let zahl1 = document.getElementById('zahl1').value
+            let zahl2 = document.getElementById('zahl2').value
+
+            if (zahl1 != '' && zahl2 != '') {
+                let ergebnis = parseInt(zahl1) + parseInt(zahl2)
+                alert(ergebnis)
+            }
+        }
+    </script>
+</body>
+
+</html>
