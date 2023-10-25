@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopfrechenspiel</title>
+</head>
+
+<body>
+
+    <script>
+
+        let number1 = Math.ceil(Math.random() * 50)
+        let number2 = Math.ceil(Math.random() * 50)
+
+        let result = number1 + number2
+
+        for (let i = 0; i < 4; i++) {
+
+            let answer
+            if (i == 0) {
+                answer = prompt('Was ist ' + number1 + '+' + number2 + ' ?')
+            } else {
+                answer = prompt('Das war falsch: Was ist ' + number1 + '+' + number2 + ' ? Du hast noch ' + (4 - i) + ' Versuche.')
+            }
+
+            if (answer == result) {
+                alert('Gewonnen!')
+                break;
+            }
+
+            if (i == 3) {
+                alert('Verloren!')
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
