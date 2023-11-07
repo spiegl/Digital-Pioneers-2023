@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zapfen</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Zapfen</h1>
+
+    <form>
+        <div class="form-group">
+            <label>Zahl: </label>
+            <input type="number" id="number">
+        </div>
+    </form>
+
+    <button onclick="berechnen()">OK!</button>
+
+    <script>
+        function berechnen() {
+            let number = document.getElementById('number').value
+            if (number != '') {
+
+                // Schleife zum Multiplizieren
+                for (let i = 2; i <= 9; i++) {
+                    // Berechnung
+                    let ergebnis = number * i
+                    document.write(number + ' * ' + i + ' = ' + ergebnis + '<br>')
+                    number = ergebnis
+                }
+
+                // Schleife zum Dividieren
+                for (let i = 2; i <= 9; i++) {
+                    // Berechnung
+                    let ergebnis = number / i
+                    document.write(number + ' / ' + i + ' = ' + ergebnis + '<br>')
+                    number = ergebnis
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
